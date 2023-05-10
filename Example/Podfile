@@ -1,0 +1,13 @@
+use_frameworks!
+
+platform :ios, '10.0'
+
+target 'SwiftySideBar_Example' do
+  pod 'SwiftySideBar', :path => '../'
+
+  target 'SwiftySideBar_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
