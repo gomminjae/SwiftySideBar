@@ -7,11 +7,13 @@
 //
 
 import UIKit
+import SwiftySideBar
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.addSubview(SwiftycSideBar())
         // Do any additional setup after loading the view, typically from a nib.
     }
 
