@@ -31,7 +31,7 @@ open class SwiftycSideBar: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupView()
-        //setupGesture()
+        setupGesture()
     }
     required public init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -50,6 +50,7 @@ open class SwiftycSideBar: UIView {
         baseView.addSubview(sideBar)
         sideBar.centerXAnchor.constraint(equalTo: baseView.centerXAnchor).isActive = true
         sideBar.trailingAnchor.constraint(equalTo: baseView.trailingAnchor).isActive = true
+        
     }
     
     var panGesture: UIPanGestureRecognizer {
@@ -74,9 +75,10 @@ open class SwiftycSideBar: UIView {
         switch sender.state {
         case .began:
             print("began")
+            panGesture.setTranslation(.zero, in: self)
         case .ended:
             print("ended")
-            //gestureRecognizerShouldBegin(sender)
+            
         default:
             print("ended")
         }
@@ -104,6 +106,7 @@ open class SwiftycSideBar: UIView {
         let view = UIView()
         view.backgroundColor = .black
         view.translatesAutoresizingMaskIntoConstraints = false
+
         return view
     }()
     

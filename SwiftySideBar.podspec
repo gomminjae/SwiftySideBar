@@ -30,7 +30,7 @@ TODO: Add long description of the pod here.
 
   s.ios.deployment_target = '10.0'
 
-  s.source_files = 'SwiftySideBar/Classes/**/*'
+  s.source_files = 'SwiftySideBar/Sources/Classes/**/*'
   
   # s.resource_bundles = {
   #   'SwiftySideBar' => ['SwiftySideBar/Assets/*.png']
