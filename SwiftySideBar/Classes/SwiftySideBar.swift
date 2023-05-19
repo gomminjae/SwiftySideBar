@@ -75,7 +75,9 @@ open class SwiftycSideBar: UIView {
         switch sender.state {
         case .began:
             print("began")
-            panGesture.setTranslation(.zero, in: self)
+            sender.setTranslation(.zero, in: self)
+            
+            
         case .ended:
             print("ended")
             
